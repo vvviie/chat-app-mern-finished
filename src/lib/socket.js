@@ -11,6 +11,10 @@ const io = new Server(server, {
   }
 });
 
+export function getReceiverSocketId(userId) {
+  return userSocketMap[userId];
+};
+
 const userSocketMap = {}; // {userId: socketId}
 
 
@@ -25,7 +29,7 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     console.log("A user disconnected:", socket.id);
-    delete userSocketMap[usreId];
+    delete userSocketMap[userId];
     io.emit("getOnlineUsers", Object.keys(userSocketMap));
   });
 });

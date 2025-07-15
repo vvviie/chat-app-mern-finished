@@ -1,6 +1,0 @@
-[submodule "backend"]
-	path = backend
-	url = https://github.com/vvviie/chat-app-mern-backend.git
-[submodule "frontend"]
-	path = frontend
-	url = https://github.com/vvviie/chat-app-mern-frontend.git
